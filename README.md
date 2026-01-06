@@ -20,24 +20,24 @@ The project demonstrates integration of structured and semi-structured data, eff
 ---
 
 ## Repository Structure
+             
+├── part1-database-etl/             
+│   ├── etl_pipeline.py         
+│   ├── schema_documentation.md               
+│   ├── business_queries.sql          
+│   └── data_quality_report.txt             
+├── part2-nosql/                         
+│   ├── nosql_analysis.md           
+│   ├── mongodb_operations.js                 
+│   └── products_catalog.js                                     
+├── part3-datawarehouse/                                          
+│   ├── star_schema_design.md                         
+│   ├── warehouse_schema.sql                      
+│   ├── warehouse_data.sql                                  
+│   └── analytics_queries.sql                                
+└── README.md                 
 
-├── part1-database-etl/
-│   ├── etl_pipeline.py
-│   ├── schema_documentation.md
-│   ├── business_queries.sql
-│   └── data_quality_report.txt
-├── part2-nosql/
-│   ├── nosql_analysis.md
-│   ├── mongodb_operations.js
-│   └── products_catalog.json
-├── part3-datawarehouse/
-│   ├── star_schema_design.md
-│   ├── warehouse_schema.sql
-│   ├── warehouse_data.sql
-│   └── analytics_queries.sql
-└── README.md
-
-
+                     
 ---
 
 ## Technologies Used
