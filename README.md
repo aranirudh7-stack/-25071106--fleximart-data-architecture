@@ -72,6 +72,9 @@ mysql -u root -p fleximart_dw < part3-datawarehouse/analytics_queries.sql
 
 mongosh < part2-nosql/mongodb_operations.js
 
+
+
+
 ## Key Learnings
 
 - Built an end-to-end data architecture integrating relational databases, NoSQL systems, and data warehouses.
