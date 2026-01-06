@@ -1,26 +1,35 @@
--- 1. Total purchases by each customer
-SELECT 
-    c.customer_id,
-    CONCAT(c.first_name, ' ', c.last_name) AS customer_name,
-    COUNT(o.order_id) AS total_orders,
-    SUM(o.total_amount) AS total_spent
+-- Query 1: Customer Purchase History
+SELECT
+    CONCAT(c.first_name,' ',c.last_name) AS customer_name,
+    c.email,
+    COUNT(DISTINCT o.order_id) AS total_orders,
+    SUM(oi.subtotal) AS total_spent
 FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id
-GROUP BY c.customer_id;
+JOIN order_items oi ON o.order_id = oi.order_id
+GROUP BY c.customer_id, c.email
+HAVING total_orders >= 2 AND total_spent > 5000
+ORDER BY total_spent DESC;
 
--- 2. Top selling products by quantity
-SELECT 
-    p.product_name,
-    SUM(oi.quantity) AS total_quantity_sold
-FROM order_items oi
-JOIN products p ON oi.product_id = p.product_id
-GROUP BY p.product_name
-ORDER BY total_quantity_sold DESC;
+-- Query 2: Product Sales Analysis
+SELECT
+    p.category,
+    COUNT(DISTINCT p.product_id) AS num_products,
+    SUM(oi.quantity) AS total_quantity_sold,
+    SUM(oi.subtotal) AS total_revenue
+FROM products p
+JOIN order_items oi ON p.product_id = oi.product_id
+GROUP BY p.category
+HAVING total_revenue > 10000
+ORDER BY total_revenue DESC;
 
--- 3. Monthly sales trend
-SELECT 
-    DATE_FORMAT(order_date, '%Y-%m') AS month,
-    SUM(total_amount) AS monthly_revenue
-FROM orders
-GROUP BY month
-ORDER BY month;
+-- Query 3: Monthly Sales Trend with Running Total
+SELECT
+    MONTHNAME(o.order_date) AS month_name,
+    COUNT(DISTINCT o.order_id) AS total_orders,
+    SUM(o.total_amount) AS monthly_revenue,
+    SUM(SUM(o.total_amount)) OVER (ORDER BY MONTH(o.order_date)) AS cumulative_revenue
+FROM orders o
+WHERE YEAR(o.order_date) = 2024
+GROUP BY MONTH(o.order_date), MONTHNAME(o.order_date)
+ORDER BY MONTH(o.order_date);
