@@ -1,0 +1,19 @@
+FlexiMart Data Quality Report
+
+1. Missing Values
+- Some customers have missing email addresses.
+- Some products have missing price values.
+- Some transactions have missing customer or product IDs.
+
+2. Duplicate Records
+- Duplicate customer records identified and removed during ETL.
+- Duplicate transaction IDs handled during transformation.
+
+3. Data Standardization
+- Category names standardized (Electronics, Fashion, Groceries).
+- Dates converted to ISO format (YYYY-MM-DD).
+- Phone numbers normalized to numeric format.
+
+4. Data Validation
+- Foreign key consistency ensured.
+- Invalid records logged and excluded from loading.
