@@ -19,12 +19,12 @@ The project demonstrates integration of structured and semi-structured data, eff
 
 ## Repository Structure
 
-data/
-part1-database-etl/
-part2-nosql/
-part3-datawarehouse/
-.gitignore
-README.md
+data/   
+part1-database-etl/         
+part2-nosql/         
+part3-datawarehouse/          
+.gitignore            
+README.md         
 
 
 ---
