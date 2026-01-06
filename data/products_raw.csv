@@ -1,16 +1,21 @@
-product_id,product_name,category,subcategory,price,warranty_months
-P001,Samsung Galaxy S21,Electronics,Smartphones,45999,12
-P002,Apple MacBook Pro,Electronics,Laptops,189999,12
-P003,Sony Headphones,Electronics,Audio,29990,24
-P004,Dell Monitor,Electronics,Monitors,32999,36
-P005,OnePlus Nord,Electronics,Smartphones,26999,12
-P006,Samsung TV,Electronics,Televisions,64999,24
-P007,Levis Jeans,Fashion,Clothing,3499,3
-P008,Nike Sneakers,Fashion,Footwear,12995,6
-P009,Adidas T-Shirt,Fashion,Clothing,1499,3
-P010,Puma Sneakers,Fashion,Footwear,8999,6
-P011,H&M Shirt,Fashion,Clothing,1999,3
-P012,Reebok Trackpants,Fashion,Clothing,2299,3
-P013,Basmati Rice,Groceries,Rice,650,0
-P014,Organic Honey,Groceries,Food,450,0
-P015,Masoor Dal,Groceries,Pulses,120,0
+product_id,product_name,category,price,stock_quantity
+P001,Samsung Galaxy,S21,Electronics,45999,150
+P002,Nike Running Shoes,fashion,3499,80
+P003,Apple MacBook Pro,ELECTRONICS,45
+P004,levi's Jeans,Fashion,2999,120
+P005,Sony Headphones,electronics,1999,200
+P006,Organic Almonds,Groceries,899	
+P007,HP Laptop,Electronics,52999,60
+P008,Adidas T-Shirt,FASHION,1299,150
+P009,Basmati Rice 5kg,Groceries,650,300
+P010,OnePlus Nord,Electronics,95
+P011,Puma Sneakers,Fashion,4599,70
+P012,Dell Monitor 24inch,Electronics,12999,40
+P013,Woodland Shoes,fashion,5499,55
+P014,iPhone 13,Electronics,69999,80
+P015,Organic Honey 500g,Groceries,450,200
+P016,Samsung TV 43inch,ELECTRONICS,32999,35
+P017,H&M Shirt,Fashion,90
+P018,Masoor Dal 1kg,groceries,120,500
+P019,Boat Earbuds,Electronics,1499,250
+P020,Reebok Trackpants,FASHION,1899,110
