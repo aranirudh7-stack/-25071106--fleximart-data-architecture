@@ -57,13 +57,22 @@ Stores individual items within an order.
 - subtotal
 
 ---
+## Normalization Explanation (3NF)
 
-## Normalization
-The database schema is designed in **Third Normal Form (3NF)**:
-- Each table represents a single entity
-- No partial dependencies
-- No transitive dependencies
+The FlexiMart database is designed in Third Normal Form (3NF) to eliminate redundancy and ensure data integrity.
 
+In the customers table, the primary key (customer_id) uniquely determines first_name, last_name, email, phone, city, and registration_date. There are no partial dependencies, and all attributes depend only on the primary key.
+
+In the products table, product_id uniquely identifies product_name, category, price, and stock_quantity. Category information is stored once per product, avoiding repetition across transactions.
+
+The orders table separates order-level data such as order_date and total_amount from item-level data, preventing update anomalies. Each order references exactly one customer via a foreign key.
+
+The order_items table resolves the many-to-many relationship between orders and products. Each non-key attribute (quantity, unit_price, subtotal) depends entirely on the composite relationship.
+
+This design avoids:
+- **Update anomalies**: Product price updates occur in one place
+- **Insert anomalies**: Orders can exist without items initially
+- **Delete anomalies**: Deleting an order does not remove customer data
 ---
 
 ## Relationships
