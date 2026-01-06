@@ -1,0 +1,37 @@
+[
+  {
+    "product_id": "P001",
+    "product_name": "Samsung Galaxy S21",
+    "category": "Electronics",
+    "price": 45999,
+    "stock": 150
+  },
+  {
+    "product_id": "P002",
+    "product_name": "Nike Running Shoes",
+    "category": "Fashion",
+    "price": 3499,
+    "stock": 80
+  },
+  {
+    "product_id": "P003",
+    "product_name": "Apple MacBook Pro",
+    "category": "Electronics",
+    "price": 189999,
+    "stock": 45
+  },
+  {
+    "product_id": "P004",
+    "product_name": "Levis Jeans",
+    "category": "Fashion",
+    "price": 2999,
+    "stock": 120
+  },
+  {
+    "product_id": "P005",
+    "product_name": "Sony Headphones",
+    "category": "Electronics",
+    "price": 1999,
+    "stock": 200
+  }
+]
